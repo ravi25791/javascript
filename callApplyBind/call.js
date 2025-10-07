@@ -32,8 +32,8 @@
 
 // userDetails3.printDetails()
 
-function printDetails() {
-    console.log(`My name is ${this.name} and my age is ${this.age} and my city is ${this.city}`)
+function printDetails(state) {
+    console.log(`name : ${this.name} || age:  ${this.age} || city: ${this.city} || State: ${state}`)
 }
 
 let userDetails = {
@@ -41,14 +41,14 @@ let userDetails = {
     age: 30,
     city: "patna"
 }
-printDetails.call(userDetails)
+printDetails.call(userDetails, "bihar")
 
 let userDetails2 = {
     name: "aditya",
     age: 20,
     city: "delhi"
 }
-printDetails.call(userDetails2)
+printDetails.call(userDetails2, "MP")
 
 
 let userDetails3 = {
@@ -57,6 +57,6 @@ let userDetails3 = {
     city: "new delhi"
 }
 
-printDetails.call(userDetails3)
+printDetails.call(userDetails3, "Up")
 
 
